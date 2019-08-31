@@ -4,6 +4,10 @@ Improvements of this Fork
 - New options:
     - show_hour
     - show_minute
+- Appearance improvements
+ - resignation from photos, css instead
+ - glyphicon icons replaced by fontawesome chevron-up/down
+
 
 TimePicki
 =========
