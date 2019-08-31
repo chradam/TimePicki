@@ -8,6 +8,9 @@ Improvements of this Fork
  - resignation from photos, css instead
  - glyphicon icons replaced by fontawesome chevron-up/down
 
+![timepicker-deafult](https://github.com/chradam/TimePicki/blob/master/timepicker-deafult.png)<br>
+![timepicker-hour](https://github.com/chradam/TimePicki/blob/master/timepicker-hour.png)<br>
+![timepicker-minute](https://github.com/chradam/TimePicki/blob/master/timepicker-minute.png)
 
 TimePicki
 =========
