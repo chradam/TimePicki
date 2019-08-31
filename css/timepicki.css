@@ -62,6 +62,7 @@ Author: senthil
 .timepicker_wrap > span {
 	color: #000;
 	font-weight: 600;
+	text-shadow: none;
 }
 
 .timepicker_wrap:before {
