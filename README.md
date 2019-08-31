@@ -1,3 +1,10 @@
+Improvements of this Fork
+=========
+- Example of picking time from value attribute of input with start_time option usage during initialization.
+- New options:
+    - show_hour
+    - show_minute
+
 TimePicki
 =========
 

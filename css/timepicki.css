@@ -1,5 +1,5 @@
 
-/* 
+/*
 Created on: 17 Sep, 2014, 4:29:37 PM
 Author: senthil
 */
@@ -9,7 +9,7 @@ Author: senthil
 .mer_tx {
 	width: 100%;
 	text-align: center;
-	margin: 10px 0;
+	margin: 5px 0;
 }
 
 .time,
@@ -17,8 +17,7 @@ Author: senthil
 .meridian {
 	width: 60px;
 	float: left;
-	margin: 0 10px;
-	font-size: 20px;
+	font-size: 14px;
 	color: #2d2e2e;
 	font-family: arial;
 	font-weight: 700;
@@ -27,25 +26,19 @@ Author: senthil
 .prev,
 .next {
 	cursor: pointer;
-	padding: 18px;
-	width: 28%;
-	border: 1px solid #ccc;
+	padding: 2px 0;
+	width: 50%;
+	border: 1px solid transparent;
 	margin: auto;
-	background: url(../images/arrow.png) no-repeat;
-	border-radius: 5px;
+	text-align: center;
 }
 
 .prev:hover,
 .next:hover {
-	background-color: #ccc;
-}
-
-.next {
-	background-position: 50% 150%;
-}
-
-.prev {
-	background-position: 50% -50%;
+	background-color: #eee;
+	border-color: #ddd;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
 }
 
 .time_pick {
@@ -53,39 +46,63 @@ Author: senthil
 }
 
 .timepicker_wrap {
-	padding: 10px;
-	border-radius: 5px;
-	z-index: 998;
+	padding: 4px;
+	border-radius: 4px;
+	z-index: 1030;
 	display: none;
-	box-shadow: 2px 2px 5px 0 rgba(50,50,50,0.35);
-	background: #f6f6f6;
-	border: 1px solid #ccc;
+	background: #fff;
+	border: 1px solid #eee;
 	float: left;
 	position: absolute;
-	top: 27px;
+	top: -102px;
 	left: 0;
+	align-items: center;
 }
 
-.arrow_top {
+.timepicker_wrap > span {
+	color: #000;
+	font-weight: 600;
+}
+
+.timepicker_wrap:before {
+	bottom: -7px;
+	border-bottom: 0;
+	border-top: 7px solid #999;
+	left: 6px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	content: "";
+	display: inline-block;
 	position: absolute;
-	top: -10px;
-	left: 20px;
-	background: url(../images/top_arr.png) no-repeat;
-	width: 18px;
-	height: 10px;
-	z-index: 999;
+}
+
+.timepicker_wrap:after {
+	bottom: -6px;
+	border-bottom: 0;
+	border-top: 6px solid #fff;
+	left: 7px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	content: "";
+	display: inline-block;
+	position: absolute;
 }
 input.timepicki-input {
 	background: none repeat scroll 0 0 #FFFFFF;
-    	border: 1px solid #CCCCCC;
-    	border-radius: 5px 5px 5px 5px;
-    	float: none;
-    	margin: 0;
-    	text-align: center;
-    	width: 70%;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	float: none;
+	margin: 0;
+	text-align: center;
+	width: 50%;
+	outline: none;
 }
 a.reset_time {
 	float: left;
 	margin-top: 5px;
 	color: #000;
+}
+
+.timepicker_wrap .glyphicon {
+	vertical-align: text-top;
 }

@@ -16,6 +16,8 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/timepicki.css" rel="stylesheet">
+    <!-- Fontawesome CSS -->
+    <link href="node_modules/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
   </head>
 
   <body>
@@ -44,7 +46,9 @@
           <div class="inner cover indexpicker">
             <h1 class="cover-heading">Timepicki v2.0</h1>
             <p class="lead">Timepicki is a light weight jQuery Time Picker plugin for using in form submission websites. User can easily pick time in the form with using it.</p>
-	    <input id="timepicker1" type="text" name="timepicker1"/>
+	    <input id="timepicker1" type="text" name="timepicker1" class="timepicker-default" value="21:45" /><br>
+        <input id="timepicker2" type="text" name="timepicker2" class="timepicker-hours" value="" /><br>
+        <input id="timepicker3" type="text" name="timepicker3" class="timepicker-minutes" value="" /><br>
             <p class="lead">
               <a href="features.html" class="btn btn-lg btn-success">Learn more</a>
             </p>
@@ -67,8 +71,44 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/timepicki.js"></script>
+    <!-- Fontawesome JS-->
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
     <script>
-	$('#timepicker1').timepicki();
+    if ($('.timepicker-default').length > 0) {
+        $('.timepicker-default').each(function () {
+            $(this).timepicki({
+                show_meridian: false,
+                min_hour_value: 0,
+                max_hour_value: 23,
+                start_time: $(this).attr('value').split(':').filter(Boolean)
+            });
+        });
+    }
+
+    if ($('.timepicker-hours').length > 0) {
+        $('.timepicker-hours').each(function () {
+            $(this).timepicki({
+                show_meridian: false,
+                show_minute: false,
+                min_hour_value: 0,
+                max_hour_value: 23,
+                start_time: $(this).attr('value').split(':').filter(Boolean)
+            });
+        });
+    }
+
+    if ($('.timepicker-minutes').length > 0) {
+        $('.timepicker-minutes').each(function () {
+            $(this).timepicki({
+                show_meridian: false,
+                show_hour: false,
+                min_hour_value: 0,
+                max_hour_value: 23,
+                start_time: $(this).attr('value').split(':').filter(Boolean)
+            });
+        });
+    }
+
     </script>
     <script src="js/bootstrap.min.js"></script>
   </body>
